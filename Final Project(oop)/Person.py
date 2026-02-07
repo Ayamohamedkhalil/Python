@@ -1,10 +1,10 @@
 class person:
    
-    def __init__(self,name,mood,healthrate,money=0):
-        self.name=name,
-        self.mood="Neutral",
-        self.healthrate=0,
-        self.money=money,
+    def __init__(self,name,healthrate,money=0):
+        self.name=name
+        self.mood="Neutral"
+        self.healthrate=healthrate
+        self.money=money
        
 
 
@@ -33,3 +33,6 @@ class person:
         else:
             self.money -= total_cost
             print(f"{self.name} bought {items} item(s) for {total_cost} L.E.")
+    
+    def __str__(self):
+        return f"Name: {self.name}, Money: {self.money} L.E., Health: {self.healthrate}%, Mood: {self.mood}"
